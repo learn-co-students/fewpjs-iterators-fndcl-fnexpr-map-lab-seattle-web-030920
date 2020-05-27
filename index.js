@@ -12,11 +12,33 @@ const tutorials = [
 ];
 
 const titleCased = (input) => {
-  return tutorials.map( line => {
-    let tokens = line.split(' ')
-    let capitalizedTokens =
-      tokens.map( token => token.charAt(0).toUpperCase() + token.slice(1) )
-    let response = capitalizedTokens.join(' ')
-    return response
+  return tutorials.map( data => {
+    //retorna tutorials mapeado que agora se chama 'data'
+    let splitData = data.split(' ')
+    //divide a 'data' para poder manipula-la(array)
+    let doMoreStuffWithData =
+      splitData.map( data => data.charAt(0).toUpperCase() + data.slice(1) )
+    let finalProduct = doMoreStuffWithData.join(' ')
+    return finalProduct
   })
 }
+
+
+
+
+
+
+
+
+
+
+
+// const titleCased = (input) => {
+//   return tutorials.map( line => {
+//     let tokens = line.split(' ')
+//     let capitalizedTokens =
+//       tokens.map( token => token.charAt(0).toUpperCase() + token.slice(1) )
+//     let response = capitalizedTokens.join(' ')
+//     return response
+//   })
+// }
